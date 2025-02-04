@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title translate="no">G-Z</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Billabong&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f5f5f5; /* Light background color */
+            color: var(--text-color);
+            font-family: 'Roboto', Arial, sans-serif; /* Use a similar font */
+            padding: 20px;
+            margin: 0;
+        }
+        .header-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 5px;
+        }
+        .header {
+            font-size: 1.8em;
+            font-family: 'Billabong', cursive;
+            color: #007BFF; /* Blue color */
+            border: 1.5px solid #007BFF; /* Blue border */
+            padding: 5px 10px;
+            display: inline-block;
+            border-radius: 10px; /* Rounded borders */
+        }
+        .divider {
+            height: 1px;
+            background-color: #007BFF; /* Border color */
+            width: 100%;
+            margin: 5px 0;
+        }
+        .short-divider {
+            width: 50%;
+            margin: 10px auto;
+        }
+        .content {
+            text-align: center;
+            margin-top: 60px;
+        }
+        h1, h2 {
+            margin-bottom: 5px;
+            font-size: 2em;
+            text-decoration: underline;
+            color: #007BFF; /* Blue color */
+        }
+        .social-message {
+            margin-top: 30px;
+        }
+        .social-icons {
+            display: flex;
+            justify-content: center;
+            gap: 15px; /* Spacing between icons */
+            margin-top: 20px;
+        }
+        .icon {
+            font-size: 30px; 
+            color: #007BFF; /* Blue color */
+            transition: color 0.3s;
+            border: 1px solid #007BFF; /* Blue border */
+            border-radius: 3px;
+            padding: 8px; 
+            background-color: rgba(0, 119, 190, 0.1); /* Light background */
+            display: inline-block;
+        }
+        .icon:hover {
+            color: #005f8d; /* Hover color */
+            background-color: rgba(0, 119, 190, 0.2);
+        }
+        .or-divider {
+            display: flex;
+            align-items: center;
+            margin: 60px 0;
+        }
+        .or-divider::before,
+        .or-divider::after {
+            content: '';
+            flex: 1;
+            height: 1px;
+            background-color: #007BFF; /* Blue border */
+        }
+        .or-divider::before {
+            margin-right: 10px;
+        }
+        .or-divider::after {
+            margin-left: 10px;
+        }
+        .copy-message {
+            margin-top: 30px;
+        }
+        .copy-button {
+            margin-top: 10px;
+            padding: 10px 20px;
+            border: 1px solid #007BFF; /* Blue border */
+            background-color: transparent;
+            color: #007BFF; /* Blue color */
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s, color 0.3s;
+        }
+        .copy-button:hover {
+            background-color: rgba(0, 119, 190, 0.1);
+            color: white;
+        }
+        .copy-status {
+            margin-top: 10px;
+            color: #007BFF; /* Blue color */
+        }
+        .copyright {
+            margin-top: 40px;
+            color: darkgray;
+            font-size: 0.8em;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <a href="index.html" style="text-decoration: none; color: inherit;">
+        <div class="header-container">
+            <div class="header" translate="no"><strong>G-Z</strong></div>
+        </div>
+    </a>
+
+    <div class="divider"></div>
+
+    <div class="content">
+        <h1>Share GZ</h1>
+        <div class="short-divider"></div>
+        <p class="social-message">Let's discover who we are and how we belong to the world! Besides entertainment, let's learn more about our generations:</p>
+
+        <div class="social-icons">
+            <a href="YOUR_FACEBOOK_SHARE_LINK" target="_blank" class="icon" onclick="share('Facebook')">
+                <i class="fab fa-facebook"></i>
+            </a>
+            <a href="https://api.whatsapp.com/send?text=Join%20G-Z%20!%20Let's%20discover%20our%20generation%20together,%20between%20discoveries%20and%20entertainment.%20The%20long-awaited%20moment%20has%20finally%20arrived%20🥳%20YOUR_SHARE_LINK" target="_blank" class="icon" onclick="share('WhatsApp')">
+                <i class="fab fa-whatsapp"></i>
+            </a>
+            <a href="https://telegram.me/share/url?url=YOUR_SHARE_LINK&text=Join%20G-Z%20!%20Let's%20discover%20our%20generation%20together,%20between%20discoveries%20and%20entertainment.%20The%20long-awaited%20moment%20has%20finally%20arrived%20🥳" target="_blank" class="icon" onclick="share('Telegram')">
+                <i class="fab fa-telegram"></i>
+            </a>
+            <a href="YOUR_TWITTER_SHARE_LINK" target="_blank" class="icon" onclick="share('Twitter')">
+                <i class="fab fa-twitter"></i>
+            </a>
+            <a href="YOUR_WECHAT_SHARE_LINK" target="_blank" class="icon" onclick="share('WeChat')">
+                <i class="fab fa-weixin"></i>
+            </a>
+        </div>
+
+        <div class="or-divider">
+            <span style="color: #007BFF;">Or</span> <!-- Blue color -->
+        </div>
+
+        <p class="copy-message">Copy the share link:</p>
+        <button class="copy-button" onclick="copyLink()">Copy</button>
+        <p class="copy-status" id="copyStatus"></p>
+    </div>
+
+    <div class="copyright">
+        &copy; 2025 <span translate="no">GZ</span>. All rights reserved.
+    </div>
+
+    <script>
+        const shareText = "Join G-Z! Together, let's discover the fascinating secrets of our generation, between exciting discoveries and moments of entertainment. Be part of this unique adventure! 🥂";
+        const shareLink = "GZ.online";
+
+        function copyLink() {
+            navigator.clipboard.writeText(shareLink).then(() => {
+                document.getElementById("copyStatus").innerText = "The following share link has been copied to your clipboard: " + shareLink;
+            }).catch(err => {
+                console.error("Error copying text: ", err);
+                document.getElementById("copyStatus").innerText = "Error copying text.";
+            });
+        }
+
+        function share(platform) {
+            let url;
+            switch (platform) {
+                case 'Facebook':
+                    url = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(shareLink)}&quote=${encodeURIComponent(shareText)}`;
+                    break;
+                case 'WeChat':
+                    alert("Sharing on WeChat is typically done via the app.");
+                    return;
+                case 'Twitter':
+                    url = `https://twitter.com/intent/tweet?url=${encodeURIComponent(shareLink)}&text=${encodeURIComponent(shareText)}`;
+                    break;
+                case 'WhatsApp':
+                    url = `https://api.whatsapp.com/send?text=${encodeURIComponent(shareText)}%20${encodeURIComponent(shareLink)}`;
+                    break;
+                case 'Telegram':
+                    url = `https://telegram.me/share/url?url=${encodeURIComponent(shareLink)}&text=${encodeURIComponent(shareText)}`;
+                    break;
+            }
+            window.open(url, '_blank');
+        }
+    </script>
+
+</body>
+</html>
