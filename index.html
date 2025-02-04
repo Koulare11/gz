@@ -314,10 +314,10 @@
   <!-- Modal -->
   <div id="genderModal" class="modal">
     <div class="modal-content">
-      <div class="modal-header" style="text-decoration: underline;"> Your birth gender ?</div>
+      <div class="modal-header" style="text-decoration: underline;"> Your birth gender?</div>
       <div class="modal-footer">
-        <button class="close-button" id="genderHomme" value="Men">Men</button>
-        <button class="close-button" id="genderFemme" value="Woman">Woman</button>
+        <button class="close-button" id="genderMan" value="Man">Man</button>
+        <button class="close-button" id="genderWoman" value="Woman">Woman</button>
       </div>
     
   </div>
@@ -434,11 +434,11 @@
         submitData(this.value);
       });
     });
-    document.getElementById('genderHomme').addEventListener('click', function() {
-      submitData("Male");
+    document.getElementById('genderMan').addEventListener('click', function() {
+      submitData("Man");
     });
-    document.getElementById('genderFemme').addEventListener('click', function() {
-      submitData("Female");
+    document.getElementById('genderWoman').addEventListener('click', function() {
+      submitData("Woman");
     });
 
     function submitData(gender) {
