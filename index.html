@@ -62,7 +62,7 @@
             margin-right: 2px;
         }
         .button#statistiquesButton {
-            border-bottom: 2px solid lawngreen;
+            border-bottom: 1px solid lawngreen;
         }
         .notification {
             text-align: center;
@@ -261,7 +261,7 @@
       let index = 0;
 
       setInterval(() => {
-          button.style.borderBottom = `8px solid ${colors[index]}`;
+          button.style.borderBottom = `4px solid ${colors[index]}`;
           index = (index + 1) % colors.length; // Cycle à travers les couleurs
       }, 900); // Change de couleur toutes les secondes
   </script>
