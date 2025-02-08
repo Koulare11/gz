@@ -62,7 +62,7 @@
             margin-right: 2px;
         }
         .button#statistiquesButton {
-            border-bottom: 8px solid lawngreen;
+            border-bottom: 6px solid lawngreen;
         }
         .notification {
             text-align: center;
@@ -247,11 +247,23 @@
 
   <div class="button-container">
     <a class="button" href="Faq.html" translate="yes"><i class="fas fa-question-circle"></i>FAQ</a>
-    <a class="button" href="Statistiques.html" id="statistiquesButton"><i class="fas fa-chart-bar"></i>Statistics</a>
+    <a class="button" href="Statistiques.html" id="statistiquesButton"><i class="fas fa-binoculars"></i>Discovery</a>
     <a class="button" href="Contact.html"><i class="fas fa-headset"></i>Contact</a>
     <a class="button" href="Terms.html"><i class="fas fa-file-contract"></i>Terms</a>
     <a class="button" href="Confidentialité.html"><i class="fas fa-file-contract"></i>Privacy</a>
   </div>
+
+  <script>
+      const button = document.getElementById('statistiquesButton');
+
+      let colors = ['lawngreen', 'darkred', 'yellow'];
+      let index = 0;
+
+      setInterval(() => {
+          button.style.borderBottom = `8px solid ${colors[index]}`;
+          index = (index + 1) % colors.length; // Cycle à travers les couleurs
+      }, 900); // Change de couleur toutes les secondes
+  </script>
 
   <div class="divider"></div>
 
