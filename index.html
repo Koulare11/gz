@@ -234,73 +234,75 @@
 </head>
 <body>
 
-<header>
+  <header>
     <h1 translate="no">GZ</h1>
     <div>
-        <i class="fas fa-share-icon"></i> <!-- Icône de traduction ajoutée ici -->
-        <a href="Partage.html">
-            <i class="fas fa-share-alt share-icon"></i>
-        </a>
+      <a href="pagedetraduction.html"> <!-- Remplacez par le lien de votre page de traduction -->
+        <i class="fas fa-language share-icon"></i> <!-- Icône de traduction -->
+      </a>
+      <a href="Partage.html">
+        <i class="fas fa-share-alt share-icon"></i>
+      </a>
     </div>
-</header>
+  </header>
 
-<div class="divider"></div> <!-- Ligne séparatrice ajoutée ici -->
+  <div class="divider"></div> <!-- Ligne séparatrice ajoutée ici -->
 
-<div class="button-container">
+  <div class="button-container">
     <a class="button" href="Faq.html" translate="yes"><i class="fas fa-question-circle"></i>FAQ</a>
     <a class="button" href="Statistiques.html" id="statistiquesButton">
-        <i class="fas fa-chart-bar"></i> Discovery</a>
+      <i class="fas fa-chart-bar"></i> Discovery</a>
     <a class="button" href="Contact.html"><i class="fas fa-envelope"></i>Contact</a>
     <a class="button" href="Terms.html"><i class="fas fa-file-contract"></i>Terms</a>
     <a class="button" href="Confidentialité.html"><i class="fas fa-file-contract"></i>Privacy</a>
-</div>
+  </div>
 
-<script>
+  <script>
     const button = document.getElementById('statistiquesButton');
 
     let colors = ['lawngreen', 'white'];
     let index = 0;
 
     setInterval(() => {
-        button.style.borderBottom = `4px solid ${colors[index]}`;
-        index = (index + 1) % colors.length; // Cycle à travers les couleurs
-    }, 500); // Change de couleur toutes les secondes
-</script>
+      button.style.borderBottom = `4px solid ${colors[index]}`;
+      index = (index + 1) % colors.length; // Cycle à travers les couleurs
+    }, 400); // Change de couleur toutes les secondes
+  </script>
 
-<div class="divider"></div>
+  <div class="divider"></div>
 
-<div class="notification">
+  <div class="notification">
     <span class="notification-text">Let's discover the secrets of our generations together.</span>
     <div class="new-message-badge"></div>
-</div>
+  </div>
 
-<div class="divider"></div>
+  <div class="divider"></div>
 
-<div class="footer-title">
+  <div class="footer-title">
     Join us in discovering the secrets of our generation in just a few clicks!
-</div>
+  </div>
 
-<input type="date" class="date-input" id="birthdate" placeholder="Select your date of birth" min="1900-01-01" max="" />
-<select class="country-select" id="countrySelect">
+  <input type="date" class="date-input" id="birthdate" placeholder="Select your date of birth" min="1900-01-01" max="" />
+  <select class="country-select" id="countrySelect">
     <option value="" disabled selected>Select your country of birth</option>
-</select>
-<p style="text-align: center; color: black; font-size: 0.7em; margin-top: 5px; text-decoration: underline; text-decoration-color: rgb(0, 123, 191);">
+  </select>
+  <p style="text-align: center; color: black; font-size: 0.7em; margin-top: 5px; text-decoration: underline; text-decoration-color: rgb(0, 123, 191);">
     By submitting, you agree to our terms of use.
-</p>
-<button class="submit-button" type="submit">Submit</button>
+  </p>
+  <button class="submit-button" type="submit">Submit</button>
 
-<i class="fas fa-redo reset-icon" id="resetButton" title="Reset"></i>
+  <i class="fas fa-redo reset-icon" id="resetButton" title="Reset"></i>
 
-<div class="divider"></div>
+  <div class="divider"></div>
 
-<div class="rectangle">
+  <div class="rectangle">
     <div class="text-line bold" style="font-size: 1em; color: #0056b3;">How does it work?</div>
     <div class="text-line"> Two selectors are available to you: the first is a calendar to choose your date of birth, and the second is a selector for your country of birth. Once you have made your selections, click on "Submit". After that, you will be asked to specify your biological gender; click on this option to become a contributor. Finally, click on the "Discovery" button, which is flashing lawngreen. You will then discover two new selectors: navigate according to your preferences to explore the statistics. </div>
-</div>
+  </div>
 
-<div class="text-line" style="text-align: center; color: black;">
+  <div class="text-line" style="text-align: center; color: black;">
     <span style="color: #007bff;">_____</span> Don't miss anything <span style="color: #007bff;">_____</span>
-</div>
+  </div>
 
   <footer>
     <div class="footer-content">
@@ -332,7 +334,7 @@
         <button class="close-button" id="genderMan" value="Man">Man</button>
         <button class="close-button" id="genderWoman" value="Woman">Woman</button>
       </div>
-    
+    </div>
   </div>
 
   <script type="module">
@@ -387,43 +389,6 @@
       })
       .catch(error => console.error('Error loading countries:', error));
 
-    // Translation function
-    async function translateText(text) {
-      const userLanguage = navigator.language || navigator.userLanguage;
-      const targetLanguage = userLanguage.split('-')[0];
-
-      const apiKey = 'AIzaSyCpKnrbTlGx8Enl8_5cj0_ElxVLDC2YHk0'; // Replace with your API key
-      const translateUrl = 'https://translation.googleapis.com/language/translate/v2';
-
-      const response = await fetch(translateUrl, {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json'
-        },
-        body: JSON.stringify({
-          q: text,
-          target: targetLanguage,
-          key: apiKey
-        })
-      });
-
-      const data = await response.json();
-      return data.data.translations[0].translatedText;
-    }
-
-    // Translate page content
-    async function translatePageContent() {
-      const elementsToTranslate = document.querySelectorAll('[translate="yes"]');
-      for (const element of elementsToTranslate) {
-        const originalText = element.textContent;
-        const translatedText = await translateText(originalText);
-        element.textContent = translatedText;
-      }
-    }
-
-    // Translate content on page load
-    window.onload = translatePageContent;
-
     let lastSubmittedId = null;
 
     document.querySelector('.submit-button').addEventListener('click', function() {
@@ -440,13 +405,7 @@
         alert("Please enter a date of birth and select a country!");
       }
     });
-    const genderButtons = document.querySelectorAll('.close-button.gender-option');
 
-    genderButtons.forEach(button => {
-      button.addEventListener('click', function() {
-        submitData(this.value);
-      });
-    });
     document.getElementById('genderMan').addEventListener('click', function() {
       submitData("Man");
     });
@@ -497,6 +456,7 @@
           });
       }
     });
+
     // Close modal by clicking outside
     window.onclick = function(event) {
       const modal = document.getElementById('genderModal');
@@ -509,5 +469,5 @@
     };
   </script>
 </body>
-  </html>
-  
+
+</html>
