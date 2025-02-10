@@ -156,22 +156,22 @@
 
         .modal-content {
             background-color: #fff;
-            margin: 15% auto; 
-            padding: 20px;
+            margin: 35% auto; 
+            padding: 15px; /* Reduced padding */
             border: 1px solid #007BFF; 
-            border-radius: 15px; 
+            border-radius: 10px; /* Reduced border radius */
             width: 80%; 
-            max-width: 500px; 
+            max-width: 290px; /* Reduced width */
             box-shadow: 0 2px 10px rgba(0,0,0,0.2);
         }
 
         .close {
             color: red; 
-            font-size: 28px;
+            font-size: 20px; /* Reduced font size */
             font-weight: bold;
             display: block; 
             text-align: center; 
-            margin-bottom: 15px; 
+            margin-bottom: 10px; /* Reduced margin */
             cursor: pointer;
         }
 
@@ -181,8 +181,27 @@
 
         .modal p {
             color: #333; 
-            font-size: 1.1em; 
-            text-align: left; 
+            font-size: 0.9em; /* Reduced font size */
+            text-align: center; /* Centered text */
+        }
+
+        .support-button {
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            padding: 8px 12px; /* Reduced padding */
+            cursor: pointer;
+            font-size: 0.9em; /* Reduced font size */
+            margin-top: 10px; /* Reduced margin */
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            transition: background-color 0.3s;
+        }
+
+        .support-button:hover {
+            background-color: #0056b3;
         }
     </style>
     <script type="module">
@@ -315,22 +334,36 @@
             categorySelect.addEventListener('change', debounce(updateCards, 300));
             fetchData(); // Load data on startup
 
-            // Open modal
+            // Open support modal
+            document.getElementById('supportBtn').onclick = function() {
+                document.getElementById('supportModal').style.display = 'block';
+            };
+
+            // Open FAQ modal
             document.getElementById('faqBtn').onclick = function() {
-                document.getElementById('myModal').style.display = 'block';
+                document.getElementById('faqModal').style.display = 'block';
             };
 
             // Close modal
-            document.querySelector('.close').onclick = function() {
-                document.getElementById('myModal').style.display = 'none';
-            };
+            document.querySelectorAll('.close').forEach(closeButton => {
+                closeButton.onclick = function() {
+                    this.closest('.modal').style.display = 'none';
+                };
+            });
 
             // Close modal by clicking outside
             window.onclick = function(event) {
-                const modal = document.getElementById('myModal');
-                if (event.target === modal) {
-                    modal.style.display = 'none';
-                }
+                const modals = document.querySelectorAll('.modal');
+                modals.forEach(modal => {
+                    if (event.target === modal) {
+                        modal.style.display = 'none';
+                    }
+                });
+            };
+
+            // Open PayPal link
+            document.getElementById('paypalBtn').onclick = function() {
+                window.location.href = 'https://www.paypal.com/ncp/payment/QN7HEGCSRYJKA';
             };
         });
     </script>
@@ -355,7 +388,7 @@
     <button id="faqBtn" class="button" aria-label="FAQ">
         <i class="fas fa-question-circle" style="margin-right: 2px;"></i> FAQ
     </button>
-    <button class="button" onclick="window.location.href= 'https://www.paypal.com/ncp/payment/QN7HEGCSRYJKA'" aria-label="Support" translate="no">
+    <button id="supportBtn" class="button" aria-label="Support" translate="no">
         <i class="fas fa-hand-holding-heart" style="margin-right: 5px;"></i> Support
     </button>
 </div>
@@ -382,11 +415,20 @@
     </div>
 </div>
 
-<!-- Modal -->
-<div id="myModal" class="modal">
+<!-- Support Modal -->
+<div id="supportModal" class="modal">
     <div class="modal-content">
         <span class="close">&times;</span>
-        <p>The statistics displayed are based on ongoing submissions and are updated in real time...</p>
+        <p>Thank you for your support of G-Z! Every contribution is valuable. With your help, we can keep developing this exciting project, create innovative analyses, and provide free statistics to a global audience.</p>
+        <button id="paypalBtn" class="support-button">I support now</button>
+    </div>
+</div>
+
+<!-- FAQ Modal -->
+<div id="faqModal" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        The statistics update automatically with each submission in the tables.
     </div>
 </div>
 
