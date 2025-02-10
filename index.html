@@ -105,15 +105,15 @@
         }
         .rectangle {
             width: 330px;
-            min-height: 70px;
+            min-height: 30px;
             background-color: #e7f3ff;
-            margin: 15px auto;
+            margin: 10px auto;
             border-radius: 5px;
             border: 1px solid #007bff;
             display: flex;
             flex-direction: column;
             justify-content: center;
-            padding: 9px;
+            padding: 5px;
             text-align: center;
         }
         .text-line {
@@ -234,73 +234,73 @@
 </head>
 <body>
 
-  <header>
+<header>
     <h1 translate="no">GZ</h1>
     <div>
-      <a href="Partage.html">
-        <i class="fas fa-share-alt share-icon"></i>
-      </a>
+        <i class="fas fa-share-icon"></i> <!-- Icône de traduction ajoutée ici -->
+        <a href="Partage.html">
+            <i class="fas fa-share-alt share-icon"></i>
+        </a>
     </div>
-  </header>
+</header>
 
-  <div class="divider"></div>
+<div class="divider"></div> <!-- Ligne séparatrice ajoutée ici -->
 
-  <div class="button-container">
+<div class="button-container">
     <a class="button" href="Faq.html" translate="yes"><i class="fas fa-question-circle"></i>FAQ</a>
- <a class="button" href="Statistiques.html" id="statistiquesButton">
-    <i class="fas fa-chart-bar"></i> Discovery</a>
-    <a class="button" href="Contact.html"><i class="fas fa-headset"></i>Contact</a>
+    <a class="button" href="Statistiques.html" id="statistiquesButton">
+        <i class="fas fa-chart-bar"></i> Discovery</a>
+    <a class="button" href="Contact.html"><i class="fas fa-envelope"></i>Contact</a>
     <a class="button" href="Terms.html"><i class="fas fa-file-contract"></i>Terms</a>
     <a class="button" href="Confidentialité.html"><i class="fas fa-file-contract"></i>Privacy</a>
-  </div>
+</div>
 
-  <script>
-      const button = document.getElementById('statistiquesButton');
+<script>
+    const button = document.getElementById('statistiquesButton');
 
-      let colors = ['lawngreen', 'white'];
-      let index = 0;
+    let colors = ['lawngreen', 'white'];
+    let index = 0;
 
-      setInterval(() => {
-          button.style.borderBottom = `4px solid ${colors[index]}`;
-          index = (index + 1) % colors.length; // Cycle à travers les couleurs
-      }, 900); // Change de couleur toutes les secondes
-  </script>
+    setInterval(() => {
+        button.style.borderBottom = `4px solid ${colors[index]}`;
+        index = (index + 1) % colors.length; // Cycle à travers les couleurs
+    }, 900); // Change de couleur toutes les secondes
+</script>
 
-  <div class="divider"></div>
+<div class="divider"></div>
 
-  <div class="notification">
+<div class="notification">
     <span class="notification-text">Let's discover the secrets of our generations together.</span>
     <div class="new-message-badge"></div>
-  </div>
+</div>
 
-  <div class="divider"></div>
+<div class="divider"></div>
 
-  <div class="footer-title">
+<div class="footer-title">
     Join us in discovering the secrets of our generation in just a few clicks!
-  </div>
+</div>
 
-  <input type="date" class="date-input" id="birthdate" placeholder="Select your date of birth" min="1900-01-01" max="" />
-  <select class="country-select" id="countrySelect">
+<input type="date" class="date-input" id="birthdate" placeholder="Select your date of birth" min="1900-01-01" max="" />
+<select class="country-select" id="countrySelect">
     <option value="" disabled selected>Select your country of birth</option>
-  </select>
-  <p style="text-align: center; color: black; font-size: 0.7em; margin-top: 5px; text-decoration: underline; text-decoration-color: rgb(0, 123, 191);">
+</select>
+<p style="text-align: center; color: black; font-size: 0.7em; margin-top: 5px; text-decoration: underline; text-decoration-color: rgb(0, 123, 191);">
     By submitting, you agree to our terms of use.
-  </p>
-  <button class="submit-button" type="submit">Submit</button>
+</p>
+<button class="submit-button" type="submit">Submit</button>
 
-  <i class="fas fa-redo reset-icon" id="resetButton" title="Reset"></i>
+<i class="fas fa-redo reset-icon" id="resetButton" title="Reset"></i>
 
-  <div class="divider"></div>
+<div class="divider"></div>
 
-  <div class="rectangle">
-    <div class="text-line bold" style="font-size: 1em; color: #0056b3;">Every contribution counts!</div>
-    <div class="text-line"> Thank you for supporting GZ! With your help, we can continue this exciting project, develop innovative analyses, and continue to provide free statistics to a global audience. </div>
-    <a href="https://www.paypal.com/ncp/payment/QN7HEGCSRYJKA" class="link" id="supportLink">I support now</a>
-  </div>
+<div class="rectangle">
+    <div class="text-line bold" style="font-size: 1em; color: #0056b3;">How does it work?</div>
+    <div class="text-line"> Two selectors are available to you: the first is a calendar to choose your date of birth, and the second is a selector for your country of birth. Once you have made your selections, click on "Submit". After that, you will be asked to specify your biological gender; click on this option to become a contributor. Finally, click on the "Discovery" button, which is flashing lawngreen. You will then discover two new selectors: navigate according to your preferences to explore the statistics. </div>
+</div>
 
-  <div class="text-line" style="text-align: center; color: black;">
+<div class="text-line" style="text-align: center; color: black;">
     <span style="color: #007bff;">_____</span> Don't miss anything <span style="color: #007bff;">_____</span>
-  </div>
+</div>
 
   <footer>
     <div class="footer-content">
@@ -319,7 +319,7 @@
         </a>
       </div>
       <div class="copyright">
-        ©️ 2025 GZ
+        ©️ 2025 G-Z
       </div>
     </div>
   </footer>
