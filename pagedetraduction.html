@@ -116,6 +116,9 @@
         const elementsToTranslate = document.querySelectorAll('.page-text, .page-title');
         const textsToTranslate = Array.from(elementsToTranslate).map(el => el.innerText);
 
+        // Vérifier le contenu à traduire
+        console.log(textsToTranslate);
+
         fetch(`https://translation.googleapis.com/language/translate/v2?key=AIzaSyAhSuyg-seUr2j5NEQzYHogYqaTyPciVH0`, {
             method: 'POST',
             body: JSON.stringify({
