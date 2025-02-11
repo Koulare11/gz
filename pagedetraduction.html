@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GZ</title>
+    <link href="https://fonts.googleapis.com/css2?family=Billabong&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f5f5f5; /* Light background color */
+            margin: 0;
+            padding: 0;
+            color: #333; /* Text color */
+            font-family: 'Roboto', Arial, sans-serif; /* Use a similar font */
+        }
+        header {
+            background-color: #ffffff; /* White background */
+            padding: 5px 10px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 50px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Light shadow */
+            max-width: 1200px; /* Limite la largeur du conteneur */
+            margin: 0 auto; /* Centre le conteneur */
+        }
+        h1 {
+            margin: 0;
+            font-size: 1.2em; /* Adjusted font size */
+            font-family: 'Billabong', cursive;
+            color: #007BFF; /* Blue color */
+        }
+        .logo-genz {
+            border: 1.5px solid #007BFF; /* Blue border */
+            padding: 3px 6px; /* Reduced padding */
+            display: inline-block;
+            border-radius: 5px;
+            white-space: nowrap;
+        }
+        .divider {
+            height: 1px;
+            background-color: #007BFF; /* Blue border */
+            width: 100%;
+            margin-top: 0; /* Remove top margin */
+        }
+        .divider-text {
+            text-align: center;
+            color: #333; /* Text color */
+            font-size: 0.9em;
+            margin: 10px 0; 
+        }
+        footer {
+            text-align: center;
+            color: #333; /* Text color */
+            margin: 20px 0;
+            font-size: 0.8em;
+        }
+        /* Style pour le menu déroulant */
+        #language-selector {
+            margin-left: auto; /* Pousse le menu à droite */
+            padding: 3px; /* Réduit le padding intérieur */
+            border: 1px solid #007BFF;
+            border-radius: 5px;
+            font-size: 0.9em;
+            color: #333;
+            background-color: #ffffff; /* White background */
+            width: 105px; /* Définir la largeur */
+        }
+    </style>
+    <script>
+        function changeLanguage() {
+            var selector = document.getElementById("language-selector");
+            var url = selector.value;
+            if (url) {
+                window.location.href = url;
+            }
+        }
+    </script>
+</head>
+<body>
+
+<header>
+    <a href="index.html" style="text-decoration: none; color: inherit;">
+        <h1 class="logo-genz" translate="no">GZ</h1>
+    </a>
+    <select id="language-selector" onchange="changeLanguage()">
+        <option value="" disabled selected>Language</option>
+        <option value="https://example.com/en">English</option>
+        <option value="https://example.com/fr">Français</option>
+        <option value="https://example.com/es">Spanish</option>
+        <option value="https://example.com/de">German</option>
+        <option value="https://example.com/zh">Chinese</option>
+        <option value="https://example.com/ru">Russian</option>
+        <option value="https://example.com/ar">Arabic</option>
+        <option value="https://example.com/pt">Portuguese</option>
+        <option value="https://example.com/it">Italian</option>
+        <option value="https://example.com/nl">Dutch</option>
+        <option value="https://example.com/ja">Japanese</option>
+        <option value="https://example.com/ko">Korean</option>
+        <option value="https://example.com/tr">Turkish</option>
+        <option value="https://example.com/hi">Hindi</option>
+        <option value="https://example.com/sv">Swedish</option>
+        <option value="https://example.com/da">Danish</option>
+        <option value="https://example.com/no">Norwegian</option>
+        <option value="https://example.com/fi">Finnish</option>
+        <option value="https://example.com/cs">Czech</option>
+        <option value="https://example.com/pl">Polish</option>
+        <option value="https://example.com/ro">Romanian</option>
+        <option value="https://example.com/hu">Hungarian</option>
+        <option value="https://example.com/sl">Slovenian</option>
+        <option value="https://example.com/sk">Slovak</option>
+        <option value="https://example.com/bg">Bulgarian</option>
+        <option value="https://example.com/ca">Catalan</option>
+        <option value="https://example.com/ms">Malay</option>
+        <option value="https://example.com/id">Indonesian</option>
+        <option value="https://example.com/vi">Vietnamese</option>
+        <option value="https://example.com/tl">Filipino</option>
+        <option value="https://example.com/sw">Swahili</option>
+        <option value="https://example.com/sr">Serbian</option>
+        <option value="https://example.com/hr">Croatian</option>
+        <option value="https://example.com/uk">Ukrainian</option>
+        <option value="https://example.com/fa">Persian</option>
+        <option value="https://example.com/ta">Tamil</option>
+        <option value="https://example.com/te">Telugu</option>
+        <option value="https://example.com/bn">Bengali</option>
+        <option value="https://example.com/mr">Marathi</option>
+        <option value="https://example.com/hy">Armenian</option>
+        <option value="https://example.com/eu">Basque</option>
+        <option value="https://example.com/gl">Galician</option>
+        <option value="https://example.com/mn">Mongolian</option>
+        <option value="https://example.com/he">Hebrew</option>
+        <option value="https://example.com/kk">Kazakh</option>
+        <option value="https://example.com/lt">Lithuanian</option>
+        <option value="https://example.com/lv">Latvian</option>
+        <option value="https://example.com/et">Estonian</option>
+        <option value="https://example.com/is">Icelandic</option>
+    </select>
+</header>
+
+<div class="divider"></div>
+<div class="divider-text">Translation page</div>
+<div class="divider"></div>
+
+<footer>
+    <p></p> <!-- Suppression de la section copyright -->
+</footer>
+
+</body>
+</html>
