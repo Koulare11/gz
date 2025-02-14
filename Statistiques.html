@@ -157,21 +157,21 @@
         .modal-content {
             background-color: #fff;
             margin: 33% auto; 
-            padding: 15px; /* Reduced padding */
+            padding: 15px;
             border: 1px solid #007BFF; 
-            border-radius: 10px; /* Reduced border radius */
+            border-radius: 10px; 
             width: 80%; 
-            max-width: 290px; /* Reduced width */
+            max-width: 290px; 
             box-shadow: 0 2px 10px rgba(0,0,0,0.2);
         }
 
         .close {
             color: red; 
-            font-size: 20px; /* Reduced font size */
+            font-size: 20px; 
             font-weight: bold;
             display: block; 
             text-align: center; 
-            margin-bottom: 10px; /* Reduced margin */
+            margin-bottom: 10px; 
             cursor: pointer;
         }
 
@@ -181,8 +181,8 @@
 
         .modal p {
             color: #333; 
-            font-size: 0.9em; /* Reduced font size */
-            text-align: center; /* Centered text */
+            font-size: 0.9em; 
+            text-align: center; 
         }
 
         .support-button {
@@ -190,10 +190,10 @@
             color: white;
             border: none;
             border-radius: 5px;
-            padding: 8px 12px; /* Reduced padding */
+            padding: 8px 12px; 
             cursor: pointer;
-            font-size: 0.9em; /* Reduced font size */
-            margin-top: 10px; /* Reduced margin */
+            font-size: 0.9em; 
+            margin-top: 10px; 
             display: block;
             margin-left: auto;
             margin-right: auto;
@@ -365,6 +365,24 @@
             document.getElementById('paypalBtn').onclick = function() {
                 window.location.href = 'https://www.paypal.com/ncp/payment/QN7HEGCSRYJKA';
             };
+
+            // Change the color of the support button every second
+            const supportButton = document.getElementById('supportBtn');
+            let isGreenSupport = false;
+
+            setInterval(() => {
+                isGreenSupport = !isGreenSupport; // Toggle the color
+                supportButton.style.backgroundColor = isGreenSupport ? 'green' : '#007BFF'; // Change color
+            }, 700);
+
+            // Change the color of the PayPal button every second
+            const paypalButton = document.getElementById('paypalBtn');
+            let isGreenPaypal = false;
+
+            setInterval(() => {
+                isGreenPaypal = !isGreenPaypal; // Toggle the color
+                paypalButton.style.backgroundColor = isGreenPaypal ? 'green' : '#007BFF'; // Change color
+            }, 1000);
         });
     </script>
 </head>
@@ -407,7 +425,7 @@
         <option value="yearly">Births by year</option>
         <option value="gender">Gender</option>
         <option value="age">Ages</option>
-        <option value="population">Population</option> <!-- Added Population option -->
+        <option value="population">Population</option>
     </select>
 
     <div class="grid" id="grid">
@@ -419,7 +437,7 @@
 <div id="supportModal" class="modal">
     <div class="modal-content">
         <span class="close">&times;</span>
-        <p>Thank you for supporting G-Z ! Every support counts. With your help, we will be able to continue to developing this exciting project, create innovative analyses, and provide free statistics to a global audience.</p>
+        <p>Thank you for supporting G-Z! Every support counts. With your help, we will be able to continue developing this exciting project, create innovative analyses, and provide free statistics to a global audience.</p>
         <button id="paypalBtn" class="support-button">I support now</button>
     </div>
 </div>
