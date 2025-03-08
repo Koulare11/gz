@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GZ</title>
-    <link rel="icon" href="https://firebasestorage.googleapis.com/v0/b/genz-9f218.firebasestorage.app/o/_f4v2ry.jpg?alt=media&token=9985a2cf-1219-483c-aa32-f673cf5ccbfd"> <!-- Profil -->
+    <link rel="icon" href="https://firebasestorage.googleapis.com/v0/b/genz-abb36.firebasestorage.app/o/_f4v2ry.jpg?alt=media&token=9985a2cf-1219-483c-aa32-f673cf5ccbfd"> <!-- Profil -->
     <link href="https://fonts.googleapis.com/css2?family=Billabong&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
@@ -17,19 +17,20 @@
         }
         header {
             background-color: white;
-            padding: 10px;
+            padding: 6px;
             display: flex;
             align-items: center;
             justify-content: space-between;
         }
+        
         h1 {
             margin: 0;
-            font-size: 1.5em;
+            font-size: 1.4em;
             font-family: 'Billabong', cursive;
             color: #007bff;
             border: 2px solid #007bff;
             padding: 4px;
-            border-radius: 4px;
+            border-radius: 12px;
         }
         .divider {
             height: 1px;
@@ -49,9 +50,9 @@
             background-color: #007bff;
             color: white;
             border: none;
-            border-radius: 5px;
+            border-radius: 8px;
             padding: 5px 10px;
-            margin: 0 5px;
+            margin: 0 2px;
             font-size: 0.8em;
             cursor: pointer;
             text-decoration: none;
@@ -75,7 +76,7 @@
             text-align: center;
             color: black;
             margin-top: 40px;
-            font-size: 1.5em;
+            font-size: 1.1em;
         }
         .date-input, .country-select, .submit-button {
             display: block;
@@ -83,13 +84,13 @@
             margin: 20px auto;
             padding: 5px;
             border: 1px solid #007bff;
-            border-radius: 0;
+            border-radius: 11px;
             background-color: white;
             color: black;
             font-size: 1em;
         }
         .submit-button {
-            padding: 10px;
+            padding: 7px;
             cursor: pointer;
             transition: background-color 0.3s;
             background-color: gray;
@@ -98,7 +99,7 @@
         .reset-icon {
             color: #007bff;
             cursor: pointer;
-            font-size: 1.2em;
+            font-size: 1.0em;
             display: none;
             margin: 10px auto;
             text-align: center;
@@ -108,7 +109,7 @@
             min-height: 30px;
             background-color: #e7f3ff;
             margin: 10px auto;
-            border-radius: 5px;
+            border-radius: 50px;
             border: 1px solid #007bff;
             display: flex;
             flex-direction: column;
@@ -117,7 +118,7 @@
             text-align: center;
         }
         .text-line {
-            font-size: 0.9em;
+            font-size: 0.8em;
             color: #0056b3;
             margin: 5px 0;
         }
@@ -139,16 +140,16 @@
         .share-icon {
             color: #007bff;
             cursor: pointer;
-            font-size: 1.5em;
+            font-size: 1.3em;
             border: 1px solid #007bff;
-            border-radius: 4px;
+            border-radius: 7px;
             padding: 4px;
             background-color: white;
         }
         footer {
             background-color: white;
             color: black;
-            padding: 10px 20px;
+            padding: 10px 15px;
         }
         .footer-content {
             display: flex;
@@ -160,11 +161,12 @@
         }
         .logo {
             color: #007bff;
-            font-size: 1.5em;
+            font-size: 1.6em;
             margin-right: 10px;
             border: 1px solid #007bff;
-            border-radius: 2px;
+            border-radius: 10px;
             padding: 5px;
+            background-color: rgba(0, 119, 190, 0.1);
             transition: background-color 0.3s;
         }
         .logo:hover {
@@ -186,49 +188,52 @@
         }
         .modal-content {
             background-color: white;
-            margin: 43% auto;
-            padding: 20px;
+            margin: 26% auto;
+            padding: 18px;
             border: 1px solid #007bff;
-            border-radius: 30px;
-            width: 170px;
+            border-radius: 60px;
+            width: 180px;
+            max-width: 70%;
             text-align: center;
+            max-height: 80vh;
+            overflow-y: auto;
         }
         .modal-header {
-            font-size: 1.1em; /* Réduire la taille */
-            margin-bottom: 15px;
-            font-weight: bold; /* Mettre en gras */
-            color: #007bff; /* Couleur */
-            text-decoration: underline; /* Souligner */
+            font-size: 1.0em;
+            margin-bottom: 10px;
+            font-weight: bold;
+            color: #007bff;
+            text-decoration: underline;
         }
+        
         .modal-footer {
             margin-top: 15px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 8px;
         }
         .close-button {
             background-color: #007bff;
             color: white;
             border: none;
             border-radius: 5px;
-            padding: 5px 10px;
+            padding: 8px 10px;
             cursor: pointer;
-            margin: 0 5px;
-            font-size: 0.8em; /* Taille des boutons réduite */
+            font-size: 0.9em;
+            width: 120px;
+            margin: 4px;
         }
         .close-button:hover {
             background-color: #0056b3;
         }
-        .gender-options {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            margin-top: 10px;
-        }
-        .gender-option {
-            margin: 5px;
-        }
-        .or-text {
-            margin-top: 10px;
+        .gender-category {
             font-weight: bold;
-            font-size: 0.8em; /* Réduire la taille de "Ou" */
+            color: #007bff;
+            margin-top: 2px;
+            margin-bottom: 5px;
+            text-align: center;
+            width: 100%;
         }
     </style>
 </head>
@@ -240,11 +245,10 @@
       <a href="pagedetraduction.html">
         <i class="fas fa-language share-icon"></i> <!-- Icône de traduction -->
       </a>
-      
     </div>
   </header>
 
-  <div class="divider"></div> <!-- Ligne séparatrice ajoutée ici -->
+  <div class="divider"></div>
 
   <div class="button-container">
     <a class="button" href="Faq.html" translate="yes"><i class="fas fa-question-circle"></i>FAQ</a>
@@ -295,7 +299,7 @@
 
   <div class="rectangle">
     <div class="text-line bold" style="font-size: 1em; color: #0056b3;">How does it work?</div>
-    <div class="text-line"> Two selectors are available to you: the first is a calendar to choose your date of birth, and the second is a selector for your country of birth. Once you have made your selections, click on "Submit". After that, you will be asked to specify your biological gender; click on this option to become a contributor. Finally, click on the "Discovery" button, which is flashing lawngreen. You will then discover two new selectors: navigate according to your preferences to explore the statistics. </div>
+    <div class="text-line"> Two selectors are available to you: the first is a calendar to choose your date of birth, and the second is a selector for your country of birth. Once you have made your selections, click on "Submit". After that, you will be asked to specify your gender; click on this option to become a contributor. Finally, click on the "Discovery" button, which is flashing lawngreen. You will then discover two new selectors: navigate according to your preferences to explore the statistics. </div>
   </div>
 
   <div class="text-line" style="text-align: center; color: black;">
@@ -327,10 +331,28 @@
   <!-- Modal -->
   <div id="genderModal" class="modal">
     <div class="modal-content">
-      <div class="modal-header" style="text-decoration: underline;"> Your birth gender?</div>
+      <div class="modal-header">Your gender?</div>
+      
+      <div class="gender-category">Binary genders</div>
       <div class="modal-footer">
-        <button class="close-button" id="genderMan" value="Man">Man</button>
-        <button class="close-button" id="genderWoman" value="Woman">Woman</button>
+        <button class="close-button gender-option" value="Man">Man</button>
+        <button class="close-button gender-option" value="Woman">Woman</button>
+      </div>
+      
+      <div class="gender-category">Non-binary genders</div>
+      <div class="modal-footer">
+        <button class="close-button gender-option" value="Non-binary">Non-binary</button>
+        <button class="close-button gender-option" value="Genderqueer">Genderqueer</button>
+        <button class="close-button gender-option" value="Genderfluid">Genderfluid</button>
+        <button class="close-button gender-option" value="Agender">Agender</button>
+      </div>
+      
+      <div class="gender-category">Other gender identities</div>
+      <div class="modal-footer">
+        <button class="close-button gender-option" value="Transgender">Transgender</button>
+        <button class="close-button gender-option" value="Two-Spirit">Two-Spirit</button>
+        <button class="close-button gender-option" value="Bigender">Bigender</button>
+        <button class="close-button gender-option" value="Androgyne">Androgyne</button>
       </div>
     </div>
   </div>
@@ -341,13 +363,13 @@
     import { getAuth, signInAnonymously } from "https://www.gstatic.com/firebasejs/9.0.0/firebase-auth.js";
 
     const firebaseConfig = {
-      apiKey: "AIzaSyBwfLgPM_tz2aFW33ck5iF9SPSxpPpYSHU",
-      authDomain: "genz-9f218.firebaseapp.com",
-      databaseURL: "https://genz-9f218-default-rtdb.firebaseio.com",
-      projectId: "genz-9f218",
-      storageBucket: "genz-9f218.firebasestorage.app",
-      messagingSenderId: "286958713700",
-      appId: "1:286958713700:web:29d878befaf6dd8c049871",
+      apiKey: "AIzaSyCrPKQOqw4zciASa_5PbI_etfkvrBaDPDI",
+      authDomain: "genz-abb36.firebaseapp.com",
+      projectId: "genz-abb36",
+      storageBucket: "genz-abb36.firebasestorage.app",
+      messagingSenderId: "405021535683",
+      appId: "1:405021535683:web:ee5a28fde27f5558046176",
+      measurementId: "G-XZNQND2J00"
     };
 
     const app = initializeApp(firebaseConfig);
@@ -404,11 +426,11 @@
       }
     });
 
-    document.getElementById('genderMan').addEventListener('click', function() {
-      submitData("Man ");
-    });
-    document.getElementById('genderWoman').addEventListener('click', function() {
-      submitData("Woman ");
+    // Ajouter des écouteurs d'événements à tous les boutons d'option de genre
+    document.querySelectorAll('.gender-option').forEach(button => {
+      button.addEventListener('click', function() {
+        submitData(this.value);
+      });
     });
 
     function submitData(gender) {
@@ -467,5 +489,4 @@
     };
   </script>
 </body>
-
 </html>
