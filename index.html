@@ -365,14 +365,15 @@
     import { getAuth, signInAnonymously } from "https://www.gstatic.com/firebasejs/9.0.0/firebase-auth.js";
 
     const firebaseConfig = {
-  apiKey: process.env.REACT_APP_FIREBASE_API_KEY,
-  authDomain: process.env.REACT_APP_FIREBASE_AUTH_DOMAIN,
-  projectId: process.env.REACT_APP_FIREBASE_PROJECT_ID,
-  storageBucket: process.env.REACT_APP_FIREBASE_STORAGE_BUCKET,
-  messagingSenderId: process.env.REACT_APP_FIREBASE_MESSAGING_SENDER_ID,
-  appId: process.env.REACT_APP_FIREBASE_APP_ID
+  apiKey: "AIzaSyCrPKQOqw4zciASa_5PbI_etfkvrBaDPDI",
+  authDomain: "genz-abb36.firebaseapp.com",
+  databaseURL: "https://genz-abb36-default-rtdb.firebaseio.com",
+  projectId: "genz-abb36",
+  storageBucket: "genz-abb36.firebasestorage.app",
+  messagingSenderId: "405021535683",
+  appId: "1:405021535683:web:ee5a28fde27f5558046176",
+  measurementId: "G-XZNQND2J00"
 };
-
     const app = initializeApp(firebaseConfig);
     const database = getDatabase(app);
     const auth = getAuth(app);
