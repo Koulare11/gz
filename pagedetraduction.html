@@ -55,27 +55,52 @@
             margin: 20px 0;
             font-size: 0.8em;
         }
-        /* Style pour le menu déroulant */
-        #language-selector {
-            margin-left: auto; /* Pousse le menu à droite */
-            padding: 3px; /* Réduit le padding intérieur */
+        /* Style pour l'indicateur de langue (non-sélecteur) */
+        .language-indicator {
+            margin-left: auto; /* Pousse l'indicateur à droite */
+            padding: 3px 8px; /* Réduit le padding intérieur */
             border: 1px solid #007BFF;
             border-radius: 7px;
             font-size: 0.9em;
             color: #333;
             background-color: #ffffff; /* White background */
-            width: 105px; /* Définir la largeur */
+            /* Pour réduire la largeur, vous pouvez ajuster cette valeur */
+            width: 70px; /* Largeur réduite - vous pouvez diminuer encore plus si nécessaire */
+            text-align: center;
+        }
+        
+        /* Style pour les boutons de langue */
+        .language-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px; /* Espace entre les boutons */
+            margin: 20px 0;
+            padding: 0 15px;
+            max-width: 1200px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .language-button {
+            padding: 6px 15px;
+            border: 1px solid #007BFF;
+            border-radius: 20px;
+            background-color: white;
+            color: #333;
+            text-decoration: none;
+            font-size: 0.9em;
+            transition: all 0.3s ease;
+            margin-bottom: 8px;
+            text-align: center;
+            min-width: 80px;
+        }
+        
+        .language-button:hover {
+            background-color: #007BFF;
+            color: white;
         }
     </style>
-    <script>
-        function changeLanguage() {
-            var selector = document.getElementById("language-selector");
-            var url = selector.value;
-            if (url) {
-                window.location.href = url;
-            }
-        }
-    </script>
 </head>
 <body>
 
@@ -83,27 +108,60 @@
     <a href="index.html" style="text-decoration: none; color: inherit;">
         <h1 class="logo-genz" translate="no">GZ</h1>
     </a>
-    <select id="language-selector" onchange="changeLanguage()">
-        <option value="" disabled selected>Language</option>
-        <option value="https://gzlanguage.github.io/french/">Français</option>
-        <option value="https://gzlanguage.github.io/espagnol/">Español</option>
-        <option value="https://gzlanguage.github.io/allemand/">Deutsch</option>
-        <option value="https://gzlanguage.github.io/chinois/">中文</option>
-        <option value="https://gzlanguage.github.io/russe/">Русский</option>
-        <option value="https://gzlanguage.github.io/arabe/">العربية</option>
-        <option value="https://gzlanguage.github.io/portugais/">Português</option>
-        <option value="https://gzlanguage.github.io/italien/">Italiano</option>
-        <option value="https://gzlanguage.github.io/neerlandais/">Nederlands</option>
-        <option value="https://gzlanguage.github.io/japonais/">日本語</option>
-        <option value="https://gzlanguage.github.io/coreen/">한국어</option>
-        <option value="https://gzlanguage.github.io/turc/">Türkçe</option>
-        <option value="https://gzlanguage.github.io/hindi/">हिन्दी</option>
-    </select>
+    <!-- Remplacé le sélecteur par un simple texte indicateur -->
+    <div class="language-indicator">Language</div>
 </header>
 
 <div class="divider"></div>
-<div class="divider-text">If your language is not there.  In development.</div>
+<div class="divider-text">If your language is not there. In development.</div>
 <div class="divider"></div>
+
+<!-- Ajout des boutons de langue -->
+<div class="language-buttons">
+    <a href="https://gzlanguage.github.io/french/" class="language-button">Français</a>
+    <a href="https://gzlanguage.github.io/espagnol/" class="language-button">Español</a>
+    <a href="https://gzlanguage.github.io/allemand/" class="language-button">Deutsch</a>
+    <a href="https://gzlanguage.github.io/chinois/" class="language-button">中文</a>
+    <a href="https://gzlanguage.github.io/russe/" class="language-button">Русский</a>
+    <a href="https://gzlanguage.github.io/arabe/" class="language-button">العربية</a>
+    <a href="https://gzlanguage.github.io/portugais/" class="language-button">Português</a>
+    <a href="https://gzlanguage.github.io/italien/" class="language-button">Italiano</a>
+    <a href="https://gzlanguage.github.io/neerlandais/" class="language-button">Nederlands</a>
+    <a href="https://gzlanguage.github.io/japonais/" class="language-button">日本語</a>
+    <a href="https://gzlanguage.github.io/coreen/" class="language-button">한국어</a>
+    <a href="https://gzlanguage.github.io/turc/" class="language-button">Türkçe</a>
+    <a href="https://gzlanguage.github.io/hindi/" class="language-button">हिन्दी</a>
+    <a href="https://gzlanguage.github.io/polonais/" class="language-button">Polski</a>
+    <a href="https://gzlanguage.github.io/vietnamien/" class="language-button">Tiếng Việt</a>
+    <a href="https://gzlanguage.github.io/suedois/" class="language-button">Svenska</a>
+    <a href="https://gzlanguage.github.io/roumain/" class="language-button">Română</a>
+    <a href="https://gzlanguage.github.io/grec/" class="language-button">Ελληνικά</a>
+    <a href="https://gzlanguage.github.io/tcheque/" class="language-button">Čeština</a>
+    <a href="https://gzlanguage.github.io/hongrois/" class="language-button">Magyar</a>
+    <a href="https://gzlanguage.github.io/bulgare/" class="language-button">Български</a>
+    <a href="https://gzlanguage.github.io/danois/" class="language-button">Dansk</a>
+    <a href="https://gzlanguage.github.io/finnois/" class="language-button">Suomi</a>
+    <a href="https://gzlanguage.github.io/slovaque/" class="language-button">Slovenčina</a>
+    <a href="https://gzlanguage.github.io/norvegien/" class="language-button">Norsk</a>
+    <a href="https://gzlanguage.github.io/thai/" class="language-button">ไทย</a>
+    <a href="https://gzlanguage.github.io/indonesien/" class="language-button">Bahasa Indonesia</a>
+    <a href="https://gzlanguage.github.io/hebreu/" class="language-button">עברית</a>
+    <a href="https://gzlanguage.github.io/lithuanien/" class="language-button">Lietuvių</a>
+    <a href="https://gzlanguage.github.io/letton/" class="language-button">Latviešu</a>
+    <a href="https://gzlanguage.github.io/estonien/" class="language-button">Eesti</a>
+    <a href="https://gzlanguage.github.io/croate/" class="language-button">Hrvatski</a>
+    <a href="https://gzlanguage.github.io/serbe/" class="language-button">Српски</a>
+    <a href="https://gzlanguage.github.io/slovene/" class="language-button">Slovenščina</a>
+    <a href="https://gzlanguage.github.io/maltais/" class="language-button">Malti</a>
+    <a href="https://gzlanguage.github.io/islandais/" class="language-button">Íslenska</a>
+    <a href="https://gzlanguage.github.io/irlandais/" class="language-button">Gaeilge</a>
+    <a href="https://gzlanguage.github.io/galicien/" class="language-button">Galego</a>
+    <a href="https://gzlanguage.github.io/basque/" class="language-button">Euskara</a>
+    <a href="https://gzlanguage.github.io/catalan/" class="language-button">Català</a>
+    <a href="https://gzlanguage.github.io/luxembourgeois/" class="language-button">Lëtzebuergesch</a>
+    <a href="https://gzlanguage.github.io/bengali/" class="language-button">বাংলা</a>
+    <a href="https://gzlanguage.github.io/ourdou/" class="language-button">اردو</a>
+</div>
 
 <footer>
     <p></p> <!-- Suppression de la section copyright -->
