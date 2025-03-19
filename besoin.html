@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GZ</title>
+    <link href="https://fonts.googleapis.com/css2?family=Billabong&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f5f5f5; /* Light background color */
+            margin: 0;
+            padding: 0;
+            color: #333; /* Text color */
+            font-family: 'Roboto', Arial, sans-serif; /* Use a similar font */
+        }
+        header {
+            background-color: #ffffff; /* White background */
+            padding: 5px 10px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 50px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Light shadow */
+            max-width: 1200px; /* Limite la largeur du conteneur */
+            margin: 0 auto; /* Centre le conteneur */
+        }
+        h1 {
+            margin: 0;
+            font-size: 1.3em; /* Adjusted font size */
+            font-family: 'Billabong', cursive;
+            color: #007BFF; /* Blue color */
+        }
+        .logo-genz {
+            border: 1.5px solid #007BFF; /* Blue border */
+            padding: 3px 6px; /* Reduced padding */
+            display: inline-block;
+            border-radius: 10px;
+            white-space: nowrap;
+        }
+        .divider {
+            height: 1px;
+            background-color: #007BFF; /* Blue border */
+            width: 100%;
+            margin-top: 0; /* Remove top margin */
+        }
+        .divider-text {
+            text-align: center;
+            color: #333; /* Text color */
+            font-size: 0.9em;
+            margin: 10px 0; 
+        }
+        footer {
+            text-align: center;
+            color: #333; /* Text color */
+            margin: 20px 0;
+            font-size: 0.8em;
+        }
+        /* Style pour l'indicateur de langue (non-sélecteur) */
+        .language-indicator {
+            margin-left: auto; /* Pousse l'indicateur à droite */
+            padding: 3px 8px; /* Réduit le padding intérieur */
+            border: 1px solid #007BFF;
+            border-radius: 7px;
+            font-size: 0.9em;
+            color: #333;
+            background-color: #ffffff; /* White background */
+            /* Pour réduire la largeur, vous pouvez ajuster cette valeur */
+            width: 70px; /* Largeur réduite - vous pouvez diminuer encore plus si nécessaire */
+            text-align: center;
+        }
+        
+        /* Style pour les boutons de langue */
+        .language-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px; /* Espace entre les boutons */
+            margin: 20px 0;
+            padding: 0 15px;
+            max-width: 1200px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .language-button {
+            padding: 6px 15px;
+            border: 1px solid #007BFF;
+            border-radius: 20px;
+            background-color: white;
+            color: #333;
+            text-decoration: none;
+            font-size: 0.9em;
+            transition: all 0.3s ease;
+            margin-bottom: 8px;
+            text-align: center;
+            min-width: 80px;
+        }
+        
+        .language-button:hover {
+            background-color: #007BFF;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <a href="index.html" style="text-decoration: none; color: inherit;">
+        <h1 class="logo-genz" translate="no">GZ</h1>
+    </a>
+    <!-- Remplacé le sélecteur par un simple texte indicateur -->
+    <div class="language-indicator">Language</div>
+</header>
+
+<div class="divider"></div>
+<div class="divider-text">If your language is not there. In development.</div>
+<div class="divider"></div>
+
+<!-- Ajout des boutons de langue -->
+<div class="language-buttons">
+    <a href="https://gzlanguage.github.io/french/" class="language-button">Français</a>
+    <a href="https://gzlanguage.github.io/espagnol/" class="language-button">Español</a>
+    <a href="https://gzlanguage.github.io/allemand/" class="language-button">Deutsch</a>
+    <a href="https://gzlanguage.github.io/chinois/" class="language-button">中文</a>
+    <a href="https://gzlanguage.github.io/russe/" class="language-button">Русский</a>
+    <a href="https://gzlanguage.github.io/arabe/" class="language-button">العربية</a>
+    <a href="https://gzlanguage.github.io/portugais/" class="language-button">Português</a>
+    <a href="https://gzlanguage.github.io/italien/" class="language-button">Italiano</a>
+    <a href="https://gzlanguage.github.io/neerlandais/" class="language-button">Nederlands</a>
+    <a href="https://gzlanguage.github.io/japonais/" class="language-button">日本語</a>
+    <a href="https://gzlanguage.github.io/coreen/" class="language-button">한국어</a>
+    <a href="https://gzlanguage.github.io/turc/" class="language-button">Türkçe</a>
+    <a href="https://gzlanguage.github.io/hindi/" class="language-button">हिन्दी</a>
+    <a href="https://gzwlrd.github.io/Polski/" class="language-button">Polski</a>
+    <a href="https://gzwlrd.github.io/vietnamian/" class="language-button">Tiếng Việt</a>
+    <a href="https://gzlanguage.github.io/suedois/" class="language-button">Svenska</a>
+    <a href="https://gzwlrd.github.io/romania/" class="language-button">Română</a>
+    <a href="https://gzwlrd.github.io/grec/" class="language-button">Ελληνικά</a>
+    <a href="https://gzwlrd.github.io/tcheque/" class="language-button">Čeština</a>
+    <a href="https://gzwlrd.github.io/hongrois/" class="language-button">Magyar</a>
+    <a href="https://gzwlrd.github.io/bulgare/" class="language-button">Български</a>
+    <a href="https://gzwlrd.github.io/danois/" class="language-button">Dansk</a>
+    <a href="https://gzwlrd.github.io/finnois/" class="language-button">Suomi</a>
+    <a href="https://gzwlrd.github.io/slovaque/" class="language-button">Slovenčina</a>
+    <a href="https://gzwlrd.github.io/norvege/" class="language-button">Norsk</a>
+    <a href="https://gzwlrd.github.io/thai/" class="language-button">ไทย</a>
+    <a href="https://gzwlrd.github.io/indonesian/" class="language-button">Bahasa Indonesia</a>
+    <a href="https://gzwlrd.github.io/hebreu/" class="language-button">עברית</a>
+    <a href="https://gzwlrd.github.io/lituanie/" class="language-button">Lietuvių</a>
+    <a href="https://gzwlrd.github.io/lettenoie/" class="language-button">Latviešu</a>
+    <a href="https://gzwlrd.github.io/Estonie/" class="language-button">Eesti</a>
+    <a href="https://gzwlrd.github.io/croate/" class="language-button">Hrvatski</a>
+    <a href="https://gzwlrd.github.io/serbe/" class="language-button">Српски</a>
+    <a href="https://gzwlrd.github.io/slovaque/" class="language-button">Slovenščina</a>
+    <a href="https://gzwlrd.github.io/malte/" class="language-button">Malti</a>
+    <a href="https://gzwlrd.github.io/islandais/" class="language-button">Íslenska</a>
+    <a href="https://gzwlrd.github.io/irlandais/" class="language-button">Gaeilge</a>
+    <a href="https://gzwlrd.github.io/galice/" class="language-button">Galego</a>
+    <a href="https://gzwlrd.github.io/basque/" class="language-button">Euskara</a>
+    <a href="https://gzwlrd.github.io/catala/" class="language-button">Català</a>
+    <a href="https://gzwlrd.github.io/Luxembourg-/" class="language-button">Lëtzebuergesch</a>
+    <a href="https://gzwlrd.github.io/bengali/" class="language-button">বাংলা</a>
+    <a href="https://gzwlrd.github.io/ourdou/" class="language-button">اردو</a>
+</div>
+
+<footer>
+    <p></p> <!-- Suppression de la section copyright -->
+</footer>
+
+</body>
+</html>
