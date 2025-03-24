@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>G-Z</title>
+    <link href="https://fonts.googleapis.com/css2?family=Billabong&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        :root {
+            --primary-color: #007BFF;
+            --primary-dark: #0056b3;
+            --background-color: #f5f5f5;
+            --text-color: #333;
+            --white: #ffffff;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Roboto', Arial, sans-serif;
+            background-color: var(--background-color);
+            color: var(--text-color);
+            line-height: 1.4;
+            font-size: 14px;
+        }
+
+        header {
+            background-color: var(--white);
+            padding: 12px 15px;
+            display: flex;
+            justify-content: center;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        a.logo {
+            font-size: 1.6em;
+            font-family: 'Billabong', cursive;
+            color: var(--primary-color);
+            border: 1.5px solid var(--primary-color);
+            padding: 4px 10px;
+            border-radius: 10px;
+            transition: all 0.3s ease;
+            text-decoration: none;
+        }
+
+        a.logo:hover {
+            transform: scale(1.03);
+            box-shadow: 0 0 10px rgba(0, 123, 255, 0.2);
+        }
+
+        .divider {
+            height: 1px;
+            background: linear-gradient(to right, transparent, var(--primary-color), transparent);
+            width: 100%;
+            margin: 2px 0;
+        }
+
+        .paragraph-container {
+            padding: 15px;
+            font-size: 1.2em;
+            text-align: center;
+            background-color: #e9f5ff;
+            border: 1px solid var(--primary-color);
+            border-radius: 10px;
+            margin: 15px;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+            animation: slideUp 0.8s ease-out;
+        }
+
+        .paragraph-container p {
+            margin: 8px 0;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        @keyframes slideUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @media (max-width: 768px) {
+            a.logo {
+                font-size: 1.4em;
+            }
+
+            .paragraph-container {
+                margin: 10px;
+                padding: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <a href="index.html" class="logo" translate="no">G-Z</a>
+    </header>
+    <div class="divider"></div>
+
+    <div class="paragraph-container">
+        <p><strong>
+            Thank you for your support!  
+        </div>
+</body>
+</html>
